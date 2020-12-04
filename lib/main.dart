@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 36.0,
                     color: Colors.white,
+                    fontFamily: 'SourceCodePro',
                     fontWeight: FontWeight.bold),
               ),
               Text("Mobile Developer")
