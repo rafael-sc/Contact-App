@@ -28,7 +28,10 @@ flutter:
     - images/
 
   fonts:
-    - family: SourceCodePro
+    - family: Source Code Pro
       fonts:
         - asset: fonts/SourceCodePro-Regular.ttf
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto-Light.ttf
 
