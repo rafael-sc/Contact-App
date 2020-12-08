@@ -35,50 +35,56 @@ class MyApp extends StatelessWidget {
                   fontFamily: 'Roboto',
                 ),
               ),
-              Container(
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                padding: EdgeInsets.all(6),
+                // padding: EdgeInsets.all(6),
                 color: Colors.white,
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      size: 40,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "+55 48 99813-0080",
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1.12),
-                    )
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.all(6.0),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.phone,
+                        size: 40,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "+55 48 99813-0080",
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1.12),
+                      )
+                    ],
+                  ),
                 ),
               ),
-              Container(
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                padding: EdgeInsets.all(6),
+                // padding: EdgeInsets.all(6),
                 color: Colors.white,
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.mail_outline_outlined,
-                      size: 40,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "rafaelcostati@gmail.com",
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1.12),
-                    )
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.all(6.0),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.mail_outline_outlined,
+                        size: 40,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "rafaelcostati@gmail.com",
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1.12),
+                      )
+                    ],
+                  ),
                 ),
               )
             ],
