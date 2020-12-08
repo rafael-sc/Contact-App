@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import "package:flutter/material.dart";
+import "package:url_launcher/url_launcher.dart";
 
 void main() {
   runApp(MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 50.0,
-                backgroundImage: AssetImage('images/avatar.jpg'),
+                backgroundImage: AssetImage("images/avatar.jpg"),
               ),
               SizedBox(
                 height: 10,
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 36.0,
                     color: Colors.white,
-                    fontFamily: 'Source Code Pro',
+                    fontFamily: "Source Code Pro",
                     fontWeight: FontWeight.bold),
               ),
               Text(
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
                   color: Colors.indigo.shade100,
                   letterSpacing: 1.8,
                   fontWeight: FontWeight.bold,
-                  fontFamily: 'Roboto',
+                  fontFamily: "Roboto",
                 ),
               ),
               SizedBox(
@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
                         Icons.phone,
                         size: 40,
                       ),
-                      title: Text('+55 48 99813-0080',
+                      title: Text("+55 48 99813-0080",
                           style: TextStyle(
                               fontSize: 18,
                               fontFamily: "Roboto",
@@ -72,7 +72,7 @@ class MyApp extends StatelessWidget {
                         Icons.mail_outline_outlined,
                         size: 40,
                       ),
-                      title: Text('rafaelcostati@gmail.com',
+                      title: Text("rafaelcostati@gmail.com",
                           style: TextStyle(
                               fontSize: 18,
                               fontFamily: "Roboto",
@@ -86,14 +86,14 @@ class MyApp extends StatelessWidget {
   }
 
   _openPhone() {
-    launch('tel://5548998130080');
+    launch("tel://5548998130080");
   }
 
   _openMail() {
     launch(Uri(
-            scheme: 'mailto',
-            path: 'rafaelcostati@gmail.com',
-            queryParameters: {'subject': 'Contact from your flutter app'})
+            scheme: "mailto",
+            path: "rafaelcostati@gmail.com",
+            query: 'subject=Contact from your app'.replaceAll(" ", "%20"))
         .toString());
   }
 }
