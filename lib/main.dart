@@ -29,8 +29,56 @@ class MyApp extends StatelessWidget {
                 "Mobile Developer",
                 style: TextStyle(
                   fontSize: 28.0,
-                  color: Colors.white,
+                  color: Colors.teal.shade200,
+                  letterSpacing: 1.8,
+                  fontWeight: FontWeight.bold,
                   fontFamily: 'Roboto',
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                padding: EdgeInsets.all(6),
+                color: Colors.white,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.phone,
+                      size: 40,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      "+55 48 99813-0080",
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.12),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                padding: EdgeInsets.all(6),
+                color: Colors.white,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.mail_outline_outlined,
+                      size: 40,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      "rafaelcostati@gmail.com",
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.12),
+                    )
+                  ],
                 ),
               )
             ],
