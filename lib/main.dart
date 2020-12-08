@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.indigo,
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -17,6 +18,9 @@ class MyApp extends StatelessWidget {
               CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage('images/avatar.jpg'),
+              ),
+              SizedBox(
+                height: 10,
               ),
               Text(
                 "Rafael Costa",
@@ -30,7 +34,7 @@ class MyApp extends StatelessWidget {
                 "Mobile Developer",
                 style: TextStyle(
                   fontSize: 28.0,
-                  color: Colors.teal.shade200,
+                  color: Colors.indigo.shade100,
                   letterSpacing: 1.8,
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Roboto',
@@ -49,6 +53,7 @@ class MyApp extends StatelessWidget {
               Card(
                   margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                   child: ListTile(
+                      onTap: _openPhone,
                       leading: Icon(
                         Icons.phone,
                         size: 40,
@@ -62,6 +67,7 @@ class MyApp extends StatelessWidget {
               Card(
                   margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                   child: ListTile(
+                      onTap: _openMail,
                       leading: Icon(
                         Icons.mail_outline_outlined,
                         size: 40,
@@ -77,5 +83,17 @@ class MyApp extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  _openPhone() {
+    launch('tel://5548998130080');
+  }
+
+  _openMail() {
+    launch(Uri(
+            scheme: 'mailto',
+            path: 'rafaelcostati@gmail.com',
+            queryParameters: {'subject': 'Contact from your flutter app'})
+        .toString());
   }
 }
