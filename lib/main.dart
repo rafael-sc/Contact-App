@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50.0,
@@ -35,58 +36,42 @@ class MyApp extends StatelessWidget {
                   fontFamily: 'Roboto',
                 ),
               ),
-              Card(
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                // padding: EdgeInsets.all(6),
-                color: Colors.white,
+              SizedBox(
+                height: 20,
                 child: Padding(
-                  padding: const EdgeInsets.all(6.0),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.phone,
-                        size: 40,
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        "+55 48 99813-0080",
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1.12),
-                      )
-                    ],
+                  padding: const EdgeInsets.all(8.0),
+                  child: Divider(
+                    height: 2,
+                    color: Colors.white,
                   ),
                 ),
               ),
               Card(
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                // padding: EdgeInsets.all(6),
-                color: Colors.white,
-                child: Padding(
-                  padding: const EdgeInsets.all(6.0),
-                  child: Row(
-                    children: [
-                      Icon(
+                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                  child: ListTile(
+                      leading: Icon(
+                        Icons.phone,
+                        size: 40,
+                      ),
+                      title: Text('+55 48 99813-0080',
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontFamily: "Roboto",
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1.12)))),
+              Card(
+                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                  child: ListTile(
+                      leading: Icon(
                         Icons.mail_outline_outlined,
                         size: 40,
                       ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        "rafaelcostati@gmail.com",
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1.12),
-                      )
-                    ],
-                  ),
-                ),
-              )
+                      title: Text('rafaelcostati@gmail.com',
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontFamily: "Roboto",
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1.12)))),
             ],
           ),
         ),
